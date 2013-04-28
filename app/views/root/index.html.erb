@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <h1>You are logged in</h1>
+  <h5><%= link_to "Sign Out", destroy_user_session_path, format: :delete %></h5>
+<% else %>
+  <h1>You are NOT logged in</h1>
+  <h5><%= link_to "Sign In", new_user_session_path %></h5>
+<% end %>
