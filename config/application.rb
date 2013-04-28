@@ -55,6 +55,16 @@ module AhoPwManager
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    unless Rails.env.development?
+      config.assets.compress = true
+      config.assets.css_compressor = :yui
+      config.assets.js_compressor = :uglifier
+      config.assets.digest = true
+      config.assets.initialize_on_precompile = false
+      # config.action_controller.asset_host = "//ahorganics.s3.amazonaws.com"
+      # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
+      # config.assets.precompile += ['print.css','admin.css','admin.js', 'navbar.js']
+    end
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
