@@ -1,9 +1,5 @@
 source "https://rubygems.org"
 
-# YOU MUST HAVE PRE-BUNDLER INSTALLED FOR THIS TO WORK "gem install bundler --pre"
-# This specifies the ruby version to use on heroku
-ruby "1.9.3" 
-
 gem "rails", "3.2.13"
 gem "pg"
 gem "devise", "2.1.2"
