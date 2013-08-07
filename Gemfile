@@ -4,7 +4,7 @@ gem "rails", "3.2.13"
 gem "pg"
 gem "devise", "2.1.2"
 gem "unicorn"
-gem "heroku_san", "~> 4.0.7"
+gem "paratrooper"
 
 group :assets do
   gem "sass-rails"
