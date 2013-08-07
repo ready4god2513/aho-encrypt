@@ -1,8 +1,9 @@
 require "json"
 
 class PasswordController < ApplicationController
+
   def encrypt
-    email = params[:email] || "brandonh+#{User.count + 1}@ibethel.org"
+    email = params[:email] || "brandonh@ibethel.org"
     @user = User.find_or_initialize_by_email(email)
     @user.password = params[:password]
     @user.save!
@@ -13,4 +14,5 @@ class PasswordController < ApplicationController
       email: @user.email
     }.to_json
   end
+
 end
